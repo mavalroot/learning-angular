@@ -1,13 +1,18 @@
 <h1>Example name: {{ exampleName }}</h1>
 
+<!-- <button
+class="btn btn-primary"
+[disabled]="!allowNewExample"
+(click)="onCreateExample()">Add example</button> -->
+
 <input
     type="text"
     class="form-control"
     (input)="onUpdateExampleName($event)">
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="exampleName">
 
-<button
-    class="btn btn-primary"
-    [disabled]="!allowNewExample"
-    (click)="onCreateExample()">Add example</button>
 
 <p>{{ exampleCreationStatus }}</p>
