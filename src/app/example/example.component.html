@@ -25,4 +25,6 @@
     </p>
 </ng-template> -->
 
-<p [ngStyle]="{'background-color': getColor()}">Example status: {{ exampleStatus }}</p>
+<p
+    [ngStyle]="{'background-color': getColor()}"
+    [ngClass]="{online: exampleStatus === 'on'}">Example status: {{ exampleStatus }}</p>
