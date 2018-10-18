@@ -28,7 +28,7 @@ export class ExampleComponent {
     }
 
     onCreateExample() {
-        this.exampleCreationStatus = 'Server was created!'
+        this.exampleCreationStatus = 'Example was created! Name is ' + this.exampleName
     }
 
     onUpdateExampleName(event: Event) {
