@@ -11,11 +11,13 @@ export class ExampleComponent {
     exampleCreationStatus = 'No example was created!';
     exampleName = '';
     exampleCreated = false;
+    exampleStatus: string;
 
     constructor() {
         setTimeout(() => {
             this.allowNewExample = true;
         }, 2000);
+        this.exampleStatus = Math.random() > 0.5 ? 'on' : 'off';
     }
 
     ngOnInit() {
@@ -28,5 +30,13 @@ export class ExampleComponent {
 
     onUpdateExampleName(event: Event) {
         this.exampleName = (<HTMLInputElement>event.target).value;
+    }
+
+    getExampleStatus() {
+        return this.exampleStatus;
+    }
+
+    getColor() {
+        return this.exampleStatus === 'on' ? 'green' : 'red';
     }
 }
