@@ -14,4 +14,17 @@
     [disabled]="!allowNewExample"
     (click)="onCreateExample()">Add example</button>
 
-<p>{{ exampleCreationStatus }}</p>
+<!-- <p>{{ exampleCreationStatus }}</p> -->
+
+<p *ngIf="exampleCreated;">Example was created, example name is {{ exampleName }}</p>
+
+<!-- <p *ngIf="exampleCreated; else noExample">Example was created, example name is {{ exampleName }}</p>
+<ng-template #noExample>
+    <p>
+        No example was created
+    </p>
+</ng-template> -->
+
+<p
+    [ngStyle]="{'background-color': getColor()}"
+    [ngClass]="{online: exampleStatus === 'on'}">Example status: {{ exampleStatus }}</p>
