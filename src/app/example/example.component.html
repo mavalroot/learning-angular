@@ -1,11 +1,13 @@
-<p>
-  This is an example
-</p>
+<h1>Example name: {{ exampleName }}</h1>
 
-<p>
-  Number {{ getExample1() }}
-</p>
+<input
+    type="text"
+    class="form-control"
+    (input)="onUpdateExampleName($event)">
 
-<p>
-  {{ example2 }}
-</p>
+<button
+    class="btn btn-primary"
+    [disabled]="!allowNewExample"
+    (click)="onCreateExample()">Add example</button>
+
+<p>{{ exampleCreationStatus }}</p>
