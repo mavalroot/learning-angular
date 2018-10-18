@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './success-alert.component.html',
   styleUrls: ['./success-alert.component.css']
 })
-export class SucessAlertComponent implements OnInit {
+export class SuccessAlertComponent implements OnInit {
 
   constructor() { }
 
